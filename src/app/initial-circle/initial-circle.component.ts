@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-initial-circle',
@@ -6,10 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./initial-circle.component.css']
 })
 export class InitialCircleComponent implements OnInit {
+  
+  @Input() contactName!: any;
 
   constructor() { }
+  
+  initials?: string;
 
   ngOnInit(): void {
+    this.getInitials();
+    console.log(this.initials);
   }
-
+  
+  getInitials() : void{
+    const a = this.contactName.match(/\b(\w)/g); //Regex to get acronym 
+    this.initials = a.join('');
+  }
 }
