@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ContactsComponent } from './contacts/contacts.component';
+import { ContactcardComponent } from './contactcard/contactcard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContactsComponent
+    ContactsComponent,
+    ContactcardComponent
   ],
   imports: [
     BrowserModule,
