@@ -8,6 +8,7 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { ContactcardComponent } from './contactcard/contactcard.component';
 import { InitialCircleComponent } from './initial-circle/initial-circle.component';
 import { BannerComponent } from './banner/banner.component';
+import { ContactDetailsComponent } from './contact-details/contact-details.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { BannerComponent } from './banner/banner.component';
     ContactsComponent,
     ContactcardComponent,
     InitialCircleComponent,
-    BannerComponent
+    BannerComponent,
+    ContactDetailsComponent
   ],
   imports: [
     BrowserModule,
