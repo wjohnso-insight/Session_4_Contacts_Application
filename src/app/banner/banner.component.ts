@@ -19,5 +19,4 @@ export class BannerComponent implements OnInit {
     this.bannerText = this.bannerService.populateBanner().bannerText;
     this.icon = this.bannerService.populateBanner().icon;
   }
-
 }
