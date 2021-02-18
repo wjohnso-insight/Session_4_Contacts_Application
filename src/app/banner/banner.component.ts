@@ -12,7 +12,7 @@ export class BannerComponent implements OnInit {
   constructor(private bannerService: BannerService) { }
   
   ngOnInit(): void {
-    console.log(this.bannerService.sayHello())
+    console.log(this.bannerService.populateBanner())
   }
 
 }
