@@ -1,10 +1,23 @@
 import { Injectable } from '@angular/core';
-import { IconDefinition  } from '@fortawesome/free-solid-svg-icons'
+import { IconDefinition, faUser, faStop, faAddressBook } from '@fortawesome/free-solid-svg-icons'
 @Injectable({
   providedIn: 'root'
 })
 export class IconService {
   
+  constructor() {}
+  
   icon?: IconDefinition;
-  constructor() { }
+  pathName?: string;
+
+  getIcon(pathName : string) : IconDefinition{
+    switch (pathName) {
+      case '/contacts':
+        return faAddressBook
+      case '/contactdetails':
+        return faUser
+      default:
+        return faStop
+    }
+  }
 }
