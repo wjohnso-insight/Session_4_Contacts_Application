@@ -9,8 +9,7 @@ import { ActivatedRoute } from "@angular/router"
 })
 export class ContactDetailsComponent implements OnInit {
 
-  selectedContact?: Contact;
-  
+  selectedContact!: Contact;
   
   constructor(private route: ActivatedRoute, private contactsService: ContactsService) { 
   }
@@ -21,6 +20,7 @@ export class ContactDetailsComponent implements OnInit {
     if(typeof targetIdString === "string"){
       const targetIdNum : number = parseInt(targetIdString);
       this.selectedContact = this.contactsService.getSelectedContact(targetIdNum)[0];
+      console.log(this.selectedContact)
     }
   }
 
