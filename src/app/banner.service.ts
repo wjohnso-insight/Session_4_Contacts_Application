@@ -6,4 +6,8 @@ import { Injectable } from '@angular/core';
 export class BannerService {
 
   constructor() { }
+
+  sayHello(): string{
+    return 'Hello'
+  }
 }

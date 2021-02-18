@@ -1,7 +1,7 @@
 // The Banner component should display information about the page in which it is being displayed as well as an icon that represents that page
 
 import { Component, OnInit, Input } from '@angular/core';
-
+import { BannerService } from '../banner.service'
 @Component({
   selector: 'app-banner',
   templateUrl: './banner.component.html',
@@ -9,11 +9,10 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class BannerComponent implements OnInit {
 
-  constructor() { }
-  
-  @Input() bannerText!: string;
+  constructor(private bannerService: BannerService) { }
   
   ngOnInit(): void {
+    console.log(this.bannerService.sayHello())
   }
 
 }
