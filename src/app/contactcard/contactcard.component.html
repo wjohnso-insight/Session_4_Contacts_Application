@@ -1,1 +1,7 @@
-<p>{{contactInfo.name}}</p>
+<div class="flex-center" id="component-wrapper">
+    <app-initial-circle [contactName]="contactInfo.name"></app-initial-circle>
+    <div class="flex-center" id="contact-info">
+        <span id="user-name">{{contactInfo.name}}</span>
+        <span id="user-email">{{contactInfo.email | lowercase}}</span> 
+    </div>
+</div>

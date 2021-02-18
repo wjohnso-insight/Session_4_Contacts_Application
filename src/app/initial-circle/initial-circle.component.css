@@ -1,0 +1,10 @@
+#circle-wrapper{
+    width: 100px;
+    height: 100px;
+    background-color: var(--app-blue);
+    clip-path: circle(50% at 50% 50%);
+    border: solid thin black;
+    color: var(--app-gray);
+    font-weight: 900;
+    font-size: 36pt;
+}

@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ContactsComponent } from './contacts/contacts.component';
 import { ContactcardComponent } from './contactcard/contactcard.component';
+import { InitialCircleComponent } from './initial-circle/initial-circle.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactsComponent,
-    ContactcardComponent
+    ContactcardComponent,
+    InitialCircleComponent
   ],
   imports: [
     BrowserModule,
