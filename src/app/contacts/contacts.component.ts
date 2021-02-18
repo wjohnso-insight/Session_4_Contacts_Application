@@ -10,6 +10,7 @@ import { ContactsService } from '../contacts.service'
 export class ContactsComponent implements OnInit {
   
   contacts?: Contact[]; //Defined by contactsService.getContacts()
+  bannerText: string = 'Your Contacts' //This is wrong. Refactor into a bannerService
 
   constructor(private contactsService: ContactsService) { } //Dependency Injection
 
