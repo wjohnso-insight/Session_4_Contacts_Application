@@ -12,4 +12,9 @@ export class ContactsService {
   getContacts(): Contact[]{
     return Contacts;
   }
+
+  getSelectedContact(id : number){
+    const contactsArr = this.getContacts();
+    return contactsArr.filter(contact => contact.id === id);
+  }
 }
