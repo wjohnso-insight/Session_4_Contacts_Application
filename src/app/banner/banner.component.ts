@@ -11,8 +11,10 @@ export class BannerComponent implements OnInit {
 
   constructor(private bannerService: BannerService) { }
   
+  bannerText : string | undefined = undefined;
+
   ngOnInit(): void {
-    console.log(this.bannerService.populateBanner())
+    this.bannerText = this.bannerService.populateBanner().bannerText;
   }
 
 }

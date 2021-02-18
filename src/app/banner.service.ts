@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Location } from '@angular/common'
+import { Banner } from './banner'
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,18 @@ export class BannerService {
     this.location = location
    }
   
-  populateBanner() : string{
-    return 'Getting Banner'
+  populateBanner() : Banner{
+    return { bannerText: this.getBannerText(location.pathname)}
+  }
+
+  private getBannerText(pathName : string) : string{
+    switch (pathName) {
+      case '/contacts':
+        return "Your Contacts"
+      case '/contactdetails':
+        return "Contact Details"
+      default:
+        return "Contacts App"
+    }
   }
 }
