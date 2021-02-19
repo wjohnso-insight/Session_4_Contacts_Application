@@ -22,10 +22,13 @@ export class BannerService {
   }
 
   private getBannerText(pathName : string) : string{
-    switch (pathName) {
-      case '/contacts':
+
+    const parsedPath = (pathName : string) => pathName.split('/');
+
+    switch (parsedPath(pathName)[1]) {
+      case 'contacts':
         return "Your Contacts"
-      case '/contactdetails':
+      case 'details':
         return "Contact Details"
       default:
         return "Contacts App"

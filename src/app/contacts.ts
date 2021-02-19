@@ -26,7 +26,7 @@ export const Contacts : Contact[] = [
     {
         id: 12,
         name: 'Julia Hypes',
-        username: 'wjohnsto',
+        username: 'jhypes',
         email: 'j.hypes0336@gmail.com',
         address: {
             street: 'Lilley Ave.',
@@ -38,7 +38,7 @@ export const Contacts : Contact[] = [
                 lng: "81.1496"
             }
         },
-        phone: "1-812-343-1048 x0001",
+        phone: "1-740-225-1258 x3421",
         website: "willjohnston.tech",
         company:{
             name: "Insight",

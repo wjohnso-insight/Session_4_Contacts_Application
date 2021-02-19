@@ -11,10 +11,13 @@ export class IconService {
   pathName?: string;
 
   getIcon(pathName : string) : IconDefinition{
-    switch (pathName) {
-      case '/contacts':
+
+    const parsedPath = (pathName : string) => pathName.split('/');
+    
+    switch (parsedPath(pathName)[1]) {
+      case 'contacts':
         return faAddressBook
-      case '/contactdetails':
+      case 'details':
         return faUser
       default:
         return faStop

@@ -8,9 +8,11 @@ import { Contact } from '../contact'
 export class ContactcardComponent implements OnInit {
   
   @Input() contactInfo!: Contact;
+  selectedContact!: Contact;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.selectedContact = this.contactInfo
   }
-
 }

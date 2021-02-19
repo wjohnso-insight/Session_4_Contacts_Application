@@ -1,0 +1,31 @@
+.detail-label{
+    font-weight: 900;
+    color: var(--app-blue);
+}
+
+.detail-text{
+    font-weight: 300;
+    margin-left: 5px;
+}
+
+.label-val-wrapper{
+    margin-bottom: 5px;
+}
+
+#info{
+    margin-left: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
+#details{
+    margin-left: 10px;
+    max-width: 75%;
+}
+
+#contact-name{
+    color: var(--app-blue);
+    border-bottom: solid thin black;
+}
+
