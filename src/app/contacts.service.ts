@@ -9,8 +9,14 @@ export class ContactsService {
   
   constructor() { }
 
+  /*
+  CONTACTS SERVICE REFACTOR
+  -------------------------
+  To Do: 
+    [] Move from 'mock' contacts array to contacts generated from API request to JSON Placeholder API
+  */
   getContacts(): Contact[]{
-    return Contacts;
+    return Contacts; 
   }
 
   getSelectedContact(id : number){
