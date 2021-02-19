@@ -15,6 +15,7 @@ export class ContactsService {
   To Do: 
     [] Move from 'mock' contacts array to contacts generated from API request to JSON Placeholder API
   */
+
   getContacts(): Contact[]{
     return Contacts; 
   }

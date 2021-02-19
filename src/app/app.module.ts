@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,7 +9,7 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { ContactcardComponent } from './contactcard/contactcard.component';
 import { InitialCircleComponent } from './initial-circle/initial-circle.component';
 import { BannerComponent } from './banner/banner.component';
-import { ContactDetailsComponent } from './contact-details/contact-details.component';
+import { ContactDetailsComponent } from './contact-details/contact-details.component'
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ContactDetailsComponent } from './contact-details/contact-details.compo
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
