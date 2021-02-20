@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs'
+import { filter,map } from 'rxjs/operators'
 import { ContactsService } from '../contacts.service'
 import { Contact } from '../contact'
 import { ActivatedRoute } from "@angular/router"
@@ -9,19 +11,29 @@ import { ActivatedRoute } from "@angular/router"
 })
 export class ContactDetailsComponent implements OnInit {
 
-  selectedContact!: Contact;
+  selectedContact!: Contact[];
   
   constructor(private route: ActivatedRoute, private contactsService: ContactsService) { 
+
+  }
+
+  private getContacts(): Observable<Contact[]>{
+    return this.contactsService.getContacts();
+  }
+
+  private getIdSlug(): number{
+    const slug = this.route.snapshot.paramMap.get('id');
+    if(typeof slug === 'string'){
+      return parseInt(slug);
+    }else{
+      return 1;
+    }
   }
   
   ngOnInit(): void {
-    const targetIdString = this.route.snapshot.paramMap.get('id');
-    
-    if(typeof targetIdString === "string"){
-      const targetIdNum : number = parseInt(targetIdString);
-      this.selectedContact = this.contactsService.getSelectedContact(targetIdNum)[0];
-      console.log(this.selectedContact)
-    }
+    this.getContacts()
+        .subscribe(contacts => this.selectedContact = contacts.filter(contact => contact.id === this.getIdSlug()));
   }
-
 }
+
+
