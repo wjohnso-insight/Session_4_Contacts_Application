@@ -15,7 +15,6 @@ export class InitialCircleComponent implements OnInit {
 
   ngOnInit(): void {
     this.getInitials();
-    console.log(this.initials);
   }
   
   getInitials() : void{

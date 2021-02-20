@@ -1,20 +1,25 @@
 import { Injectable } from '@angular/core'; //Allows for dependency injection
+import { HttpClient } from '@angular/common/http'
+import { Observable } from 'rxjs'
 import { Contact } from './contact'
-import { Contacts } from './contacts'
-
 @Injectable({
   providedIn: 'root'
 })
 export class ContactsService {
   
-  constructor() { }
+  constructor(private http : HttpClient) { }
 
-  getContacts(): Contact[]{
-    return Contacts;
-  }
+  /*
+  CONTACTS SERVICE REFACTOR
+  -------------------------
+  To Do: 
+    [] Move from 'mock' contacts array to contacts generated from API request to JSON Placeholder API
+  */
 
-  getSelectedContact(id : number){
-    const contactsArr = this.getContacts();
-    return contactsArr.filter(contact => contact.id === id);
+  jsonPlaceholderUrl : string =  "https://jsonplaceholder.typicode.com/users"
+
+  getContacts(): Observable<Contact[]>{
+    const contacts = this.http.get<Contact[]>(this.jsonPlaceholderUrl) 
+    return contacts
   }
 }

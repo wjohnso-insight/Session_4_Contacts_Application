@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs'
 
 import { Contact } from '../contact'
 import { ContactsService } from '../contacts.service'
@@ -9,17 +10,15 @@ import { ContactsService } from '../contacts.service'
 })
 export class ContactsComponent implements OnInit {
   
-  contacts?: Contact[]; //Defined by contactsService.getContacts()
+  contacts!: Contact[]; //Defined by contactsService.getContacts()
 
   constructor(private contactsService: ContactsService) { } //Dependency Injection
 
   getContacts(): void{
-    this.contacts = this.contactsService.getContacts();
+    this.contactsService.getContacts().subscribe(contacts => this.contacts = contacts);
   }
   
   ngOnInit(): void {
     this.getContacts();
-    console.log(this.contacts)
   }
-
 }
