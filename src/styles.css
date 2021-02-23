@@ -16,6 +16,12 @@ body{
     min-height: 100%;
 }
 
+.grid{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(3,1fr);
+}
+
 .flex-center{
     display: flex;
     justify-content: center;

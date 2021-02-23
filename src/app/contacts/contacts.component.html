@@ -1,2 +1,4 @@
 <app-banner></app-banner>
-<app-contactcard *ngFor="let contact of contacts" [contactInfo]="contact"></app-contactcard>
+<div class="grid" id="component-wrapper">
+    <app-contactcard *ngFor="let contact of contacts" [contactInfo]="contact"></app-contactcard>
+</div>
