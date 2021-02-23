@@ -1,0 +1,15 @@
+#component-wrapper{
+    margin: 10px;
+    margin-left: 20px;
+}
+
+#go-back-button{
+    font-size: 12pt;
+    font-weight: 800;
+    padding: 0;
+}
+
+#go-back-button:hover{
+    cursor: pointer;
+    color: var(--app-blue);
+}

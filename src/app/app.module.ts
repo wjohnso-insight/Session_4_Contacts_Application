@@ -9,7 +9,8 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { ContactcardComponent } from './contactcard/contactcard.component';
 import { InitialCircleComponent } from './initial-circle/initial-circle.component';
 import { BannerComponent } from './banner/banner.component';
-import { ContactDetailsComponent } from './contact-details/contact-details.component'
+import { ContactDetailsComponent } from './contact-details/contact-details.component';
+import { BackButtonComponent } from './back-button/back-button.component'
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ContactDetailsComponent } from './contact-details/contact-details.compo
     ContactcardComponent,
     InitialCircleComponent,
     BannerComponent,
-    ContactDetailsComponent
+    ContactDetailsComponent,
+    BackButtonComponent
   ],
   imports: [
     BrowserModule,
